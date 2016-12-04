@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Если нужно связаться пишите по адресу ниже!
 
-### More Information
+### Email
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+[andrey.myshkin@gmail.com](mailto:andrey.myshkin@gmail.com)
