@@ -5,6 +5,8 @@ title: Первый пост будет про поиск авиаблетов!
 
 Начнем с поисковой формы, с помощью которой найдутся нужные вам авиабилеты.
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+![_config.yml]({{ site.baseurl }}/images/aircraft.jpg)
 
-#The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more #instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+<script src="//www.travelpayouts.com/calendar_widget/iframe.js?marker=65385.&origin=LED&destination=BCN&currency=rub&searchUrl=hydra.aviasales.ru&one_way=false&only_direct=false&locale=ru&period=year&range=7%2C14&width=800" async></script>
+
+[Домой](https://w111.github.com).
