@@ -19,14 +19,14 @@ avatar: https://lh3.googleusercontent.com/-T5HOM98B1Mc/AAAAAAAAAAI/AAAAAAAAAAA/A
 footer-links:
   dribbble:
   email: andrey.myshkin@gmail.com
-  facebook: https://www.facebook.com/andrey.myshkin.3
+  facebook: 
   flickr:
   github: w111/w111.github.io
   instagram:
   linkedin:
   pinterest:
   rss: RSS feed
-  twitter: andreymyshkin
+  twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: user/andreymyshkin
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -34,7 +34,7 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: Andy
+disqus: 
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-22719119-6
