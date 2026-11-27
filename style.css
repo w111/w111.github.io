@@ -25,7 +25,6 @@
   --rule: #d6cfbf;
   --accent: #c8261a;      /* the red dot of AI Today */
   --disc: #c8261a;
-  --band-accent: #ff6b57; /* accent on the inverted band */
   --serif: Literata, Georgia, "Times New Roman", serif;
   --mono: "Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 }
@@ -37,7 +36,6 @@
     --rule: #35322a;
     --accent: #ff5d4a;
     --disc: #c8261a;
-    --band-accent: #b0241a;
   }
 }
 
@@ -51,8 +49,8 @@ body {
   font-optical-sizing: auto;
   text-rendering: optimizeLegibility;
 }
-h1, h2, h3, p, ul, ol, dl, dd { margin: 0; padding: 0; }
-ul, ol { list-style: none; }
+h1, h2, p, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; }
 a:hover { color: var(--accent); }
 :focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-radius: 2px; }
@@ -91,7 +89,6 @@ a:hover { color: var(--accent); }
   line-height: .84;
   letter-spacing: -.05em;
 }
-.dot { color: var(--accent); }
 .role { margin-top: clamp(1.5rem, 3vw, 2.5rem); color: var(--muted); }
 .lead {
   margin-top: clamp(2rem, 5vw, 3.5rem);
@@ -105,7 +102,6 @@ a:hover { color: var(--accent); }
 
 /* Sections */
 section { padding-block: clamp(3.5rem, 8vw, 7rem); }
-section + section:not(.band) { border-top: 1px solid var(--rule); }
 .label {
   font-weight: 500;
   text-transform: uppercase;
@@ -121,26 +117,20 @@ section + section:not(.band) { border-top: 1px solid var(--rule); }
   background: var(--accent);
 }
 
-/* Inverted band: agents and people */
-.band.now { background: var(--ink); color: var(--paper); }
-.band.now .label::before { background: var(--band-accent); }
-.now .intro, .now .aside {
-  max-width: 40rem;
-  color: color-mix(in srgb, var(--paper) 78%, var(--ink));
-  text-wrap: pretty;
-}
-.split { margin: clamp(2rem, 5vw, 3.5rem) 0; }
-.split div {
-  font-size: clamp(2rem, 5.6vw, 4.75rem);
+/* Red band: contacts */
+.band { background: var(--accent); color: var(--paper); }
+.band .label::before { background: currentColor; }
+.band a:hover { color: inherit; text-decoration-thickness: 3px; }
+.contact {
+  font-size: clamp(2.5rem, 7vw, 6rem);
   font-weight: 330;
   line-height: 1.05;
   letter-spacing: -.035em;
 }
-.split div + div { margin-top: .15em; }
-.split dt, .split dd { display: inline; }
-.split dt { color: var(--band-accent); font-weight: 450; margin-right: .22em; }
+.contact a { text-decoration-thickness: 2px; text-underline-offset: .12em; }
+.contact a + a { margin-left: .6em; }
 
-/* Selected work */
+/* Side projects */
 .links li { border-top: 1px solid var(--rule); }
 .links li:last-child { border-bottom: 1px solid var(--rule); }
 .links a {
@@ -153,7 +143,7 @@ section + section:not(.band) { border-top: 1px solid var(--rule); }
 }
 .links b {
   font-weight: 360;
-  font-size: clamp(2.1rem, 5vw, 4rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
   line-height: 1.05;
   letter-spacing: -.035em;
   transition: color .15s;
@@ -161,51 +151,9 @@ section + section:not(.band) { border-top: 1px solid var(--rule); }
 .links .what { color: var(--muted); font-size: 1rem; line-height: 1.45; max-width: 30ch; }
 .links .url { color: var(--muted); justify-self: end; }
 .links a:hover b, .links a:hover .url { color: var(--accent); }
-.links img { width: .62em; height: .62em; border-radius: 50%; margin-left: .2em; vertical-align: .05em; }
-.note { margin-top: 1.25rem; color: var(--muted); }
-
-/* Before */
-.timeline li {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 2fr);
-  column-gap: 2rem;
-  align-items: baseline;
-}
-.timeline li + li { margin-top: clamp(2rem, 4vw, 3rem); }
-.when {
-  font-size: clamp(2rem, 4.4vw, 3.75rem);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.03em;
-  font-variant-numeric: lining-nums tabular-nums;
-}
-.when span { color: var(--accent); }
-.timeline h3, .offers h3 { font-size: clamp(1.3rem, 2.2vw, 1.75rem); font-weight: 450; line-height: 1.25; letter-spacing: -.01em; }
-.timeline h3 + p, .offers h3 + p { margin-top: .5rem; }
-.timeline p:not(.when) { color: var(--muted); max-width: 38rem; text-wrap: pretty; }
-
-/* Red band: working together */
-.band.together { background: var(--accent); color: var(--paper); }
-.together .label::before { background: currentColor; }
-.together a:hover { color: inherit; text-decoration-thickness: 3px; }
-.offers { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 4rem; max-width: 64rem; }
-.offers li { border-top: 2px solid currentColor; padding-top: 1rem; }
-.offers h3 { font-size: clamp(1.5rem, 2.8vw, 2.25rem); line-height: 1.15; letter-spacing: -.02em; }
-.contact {
-  margin-top: clamp(3rem, 6vw, 5rem);
-  font-size: clamp(1.9rem, 5.4vw, 4.5rem);
-  font-weight: 330;
-  line-height: 1.05;
-  letter-spacing: -.035em;
-}
-.contact a { text-decoration-thickness: 2px; text-underline-offset: .12em; }
 
 /* Footer */
-.colophon {
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem;
-  padding-top: 1.75rem; padding-bottom: 3rem;
-  color: var(--muted);
-}
+.colophon { padding-top: 1.75rem; padding-bottom: 3rem; color: var(--muted); }
 
 /* Notes (posts, 404) */
 .post.page { margin: 0 auto; padding: 2.5rem clamp(1.25rem, 5vw, 3.5rem) 4rem; max-width: 44rem; }
@@ -215,9 +163,6 @@ section + section:not(.band) { border-top: 1px solid var(--rule); }
 @media (max-width: 52rem) {
   .links a { grid-template-columns: minmax(0, 1fr) auto; }
   .links .what { grid-column: 1 / -1; grid-row: 2; margin-top: .35rem; }
-  .timeline li { grid-template-columns: minmax(0, 1fr); }
-  .timeline .when { margin-bottom: .75rem; }
-  .offers { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 34rem) {
   body { font-size: 1.0625rem; }
@@ -225,8 +170,3 @@ section + section:not(.band) { border-top: 1px solid var(--rule); }
   .links a { grid-template-columns: minmax(0, 1fr); }
   .links .url { justify-self: start; grid-row: 3; margin-top: .35rem; }
 }
-
-/* Contacts and side projects */
-.contact a + a { margin-left: .6em; }
-.band + section { border-top: 0; }
-.links.small b { font-size: clamp(1.6rem, 3.4vw, 2.6rem); }
