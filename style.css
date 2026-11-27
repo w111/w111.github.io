@@ -225,3 +225,8 @@ section + section:not(.band) { border-top: 1px solid var(--rule); }
   .links a { grid-template-columns: minmax(0, 1fr); }
   .links .url { justify-self: start; grid-row: 3; margin-top: .35rem; }
 }
+
+/* Contacts and side projects */
+.contact a + a { margin-left: .6em; }
+.band + section { border-top: 0; }
+.links.small b { font-size: clamp(1.6rem, 3.4vw, 2.6rem); }
