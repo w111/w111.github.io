@@ -19,3 +19,9 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      lang: ru
