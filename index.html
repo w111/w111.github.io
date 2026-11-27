@@ -1,18 +1,36 @@
 ---
 layout: default
+lang: en
+alt: /ru/
+description: CTO. AI-native software development and AI transformation of business.
 ---
+<main class="wrap">
+  <nav class="lang" aria-label="Language">
+    <a href="{{ '/' | relative_url }}" aria-current="page" lang="en">EN</a>
+    <a href="{{ '/ru/' | relative_url }}" lang="ru" hreflang="ru">RU</a>
+  </nav>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+  <header class="intro">
+    <h1>Andrey Myshkin</h1>
+    <p class="role">CTO · AI Lab, RW+ group</p>
+    <p class="lead">Over thirty years of building software and engineering teams. Now I launch AI&nbsp;products with agentic development and help established businesses put AI to&nbsp;work.</p>
+  </header>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+  <section aria-labelledby="side">
+    <h2 id="side">Side projects</h2>
+    <ul class="projects">
+      <li><a href="https://w111.github.io/AI-Pages/"><span class="name">AI Pages</span> <span class="url">w111.github.io/AI-Pages</span> <span class="what">Interactive HTML examples made with AI</span></a></li>
+      <li><a href="https://aiparty.onrender.com"><span class="name">AI Party</span> <span class="url">aiparty.onrender.com</span> <span class="what">Party games on a big screen; phones are the controllers</span></a></li>
+      <li><a href="https://t.me/ai_today_feed"><span class="name">AI Today</span> <span class="url">t.me/ai_today_feed</span> <span class="what">Telegram channel: two short AI&nbsp;digests a&nbsp;day</span></a></li>
+    </ul>
+  </section>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Подробнее...</a>
-    </article>
-  {% endfor %}
-</div>
+  <section aria-labelledby="contacts">
+    <h2 id="contacts">Contacts</h2>
+    <ul class="inline">
+      <li><a href="https://www.linkedin.com/in/andrey-myshkin/">LinkedIn</a></li>
+      <li><a href="https://github.com/w111">GitHub</a></li>
+      <li><a href="mailto:andrey.myshkin@gmail.com">andrey.myshkin@gmail.com</a></li>
+    </ul>
+  </section>
+</main>
