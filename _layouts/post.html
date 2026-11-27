@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<main class="page post">
-  <p class="mono"><a href="{{ '/' | relative_url }}">Andrey Myshkin</a></p>
-  <article>
+<main class="wrap">
+  <p class="role"><a href="{{ '/' | relative_url }}">Andrey Myshkin</a></p>
+  <article class="post">
     <h1>{{ page.title }}</h1>
     {{ content }}
-    {% if page.date %}<p class="mono muted"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y-%m-%d' }}</time></p>{% endif %}
+    {% if page.date %}<p class="role"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y-%m-%d' }}</time></p>{% endif %}
   </article>
 </main>

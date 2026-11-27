@@ -2,7 +2,7 @@
 
 Personal page of Andrey Myshkin: <https://w111.github.io> (EN) and `/ru/` (RU).
 
-Plain Jekyll on GitHub Pages, no theme and no JS: `index.html`, `ru/index.html`, `_layouts/`, `style.css`, self-hosted fonts in `fonts/` (SIL OFL).
+Plain Jekyll on GitHub Pages, no theme and no JS: `index.html`, `ru/index.html`, `_layouts/`, `style.css`, self-hosted Golos Text in `fonts/` (SIL OFL).
 
 Local build (Docker):
 
