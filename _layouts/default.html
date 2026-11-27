@@ -11,7 +11,9 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   {% if page.alt %}<link rel="alternate" hreflang="{% if page.lang == 'ru' %}en{% else %}ru{% endif %}" href="{{ page.alt | absolute_url }}">{% endif %}
-  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  <style>
+{% include style.css %}
+  </style>
   {% feed_meta %}
 </head>
 <body>
