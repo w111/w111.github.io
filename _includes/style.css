@@ -12,14 +12,6 @@
   --muted: #5e5e5b;
   --rule: #e3e3e0;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141414;
-    --text: #e9e9e6;
-    --muted: #a2a29e;
-    --rule: #2e2e2c;
-  }
-}
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
